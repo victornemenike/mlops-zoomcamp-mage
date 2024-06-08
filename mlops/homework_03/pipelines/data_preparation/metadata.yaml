@@ -29,7 +29,7 @@ blocks:
   language: python
   name: prepare
   retry_config: null
-  status: not_executed
+  status: executed
   timeout: null
   type: transformer
   upstream_blocks:
