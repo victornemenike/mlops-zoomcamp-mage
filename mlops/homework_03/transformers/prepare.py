@@ -8,7 +8,7 @@ if 'transformer' not in globals():
 
 
 @transformer
-def transform(df: pd.DataFrame, **kwargs) -> pd.DataFrame:
+def read_dataframe(df: pd.DataFrame, **kwargs) -> pd.DataFrame:
 
     df.tpep_dropoff_datetime = pd.to_datetime(df.tpep_dropoff_datetime)
     df.tpep_pickup_datetime = pd.to_datetime(df.tpep_pickup_datetime)
