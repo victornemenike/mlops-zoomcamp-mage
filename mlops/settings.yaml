@@ -30,6 +30,8 @@ projects:
   homework_03: {}
   unit_0_setup: {}
   unit_1_data_preparation: {}
+  unit_2_training:
+    path: unit_2_training
   unit_3_observability: {}
 remote_variables_dir: null
 repo_path: /home/src/mlops/homework_03
