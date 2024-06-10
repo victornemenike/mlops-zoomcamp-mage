@@ -7,8 +7,7 @@ import pickle
 EXPERIMENT_NAME = "homework-03-tracking"
 
 
-#mlflow.set_tracking_uri("sqlite:///mlflow.db")
-mlflow.set_tracking_uri("sqlite:///home/mlflow/mlflow.db")
+mlflow.set_tracking_uri(uri="http://mlflow:5000")
 
 
 mlflow.set_experiment(EXPERIMENT_NAME)
