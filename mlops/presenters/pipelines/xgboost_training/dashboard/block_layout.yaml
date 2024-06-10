@@ -1,4 +1,8 @@
 blocks:
+  ornate_flower:
+    name: ornate flower
+    type: chart
+    uuid: ornate_flower
   shap_values:
     configuration:
       chart_type: custom
@@ -40,6 +44,19 @@ blocks:
     skip_render: false
     type: chart
     uuid: shap_values_force_chart
+  shap_values_my:
+    configuration:
+      chart_type: custom
+    data_source:
+      block_uuid: dashboard_data_source
+      pipeline_schedule_id: null
+      pipeline_uuid: xgboost_training
+      type: block
+    error: null
+    name: SHAP values_my
+    skip_render: false
+    type: chart
+    uuid: shap_values_my
 layout:
 - - block_uuid: shap_values_bar
     height: 400
@@ -48,4 +65,8 @@ layout:
     height: 400
     width: 1
 - - block_uuid: shap_values_force_chart
+    width: 1
+- - block_uuid: ornate_flower
+    width: 1
+- - block_uuid: shap_values_my
     width: 1

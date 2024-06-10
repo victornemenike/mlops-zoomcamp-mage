@@ -9,7 +9,7 @@ if 'data_loader' not in globals():
 
 
 @data_loader
-def ingest_files(**kwargs) -> pd.DataFrame:
+def ingest_file(**kwargs) -> pd.DataFrame:
     dfs: List[pd.DataFrame] = []
 
 
