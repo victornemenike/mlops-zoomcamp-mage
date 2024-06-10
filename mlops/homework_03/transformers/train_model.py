@@ -15,13 +15,13 @@ def train_model(df: pd.DataFrame, **kwargs) -> Tuple[BaseEstimator, BaseEstimato
     target = 'duration'
 
     # create an instance of the dictionary vectorizer
-    dv = DictVectorizer() 
+    vectorizer = DictVectorizer() 
 
     # convert the categorical variables to a dictionary
     train_dicts = df[features].to_dict(orient = 'records')
     
     # create training data for sklearn model
-    X_train = dv.fit_transform(train_dicts)
+    X_train = vectorizer.fit_transform(train_dicts)
     y_train = df[target]
 
     # Linear regression model
@@ -31,4 +31,4 @@ def train_model(df: pd.DataFrame, **kwargs) -> Tuple[BaseEstimator, BaseEstimato
     model.fit(X_train, y_train)
     print(f'The intercept of the model is: {model.intercept_:.2f}')
     
-    return dv, model
+    return vectorizer, model
